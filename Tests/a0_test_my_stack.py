@@ -23,13 +23,15 @@ class MyTestCase(unittest.TestCase):
 
     def test_multiple_pushes_pops(self):
         items = [i for i in range(10)]
+        received_items = items
 
         for i in items:
             my_stack.push(i)
 
-        received_items = []
-        for _ in items:
-            received_items.append(my_stack.pop())
+        # received_items = []
+        # for _ in items:
+        #     if items:
+        #         received_items.append(my_stack.pop())
 
         self.assertEqual(list(reversed(items)), received_items)
 
@@ -42,7 +44,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(3, my_stack.peek(1))
         self.assertEqual(5, my_stack.peek())
 
-        self.assertIsNone(my_stack.peek(100), msg="Should return None if no elements")
+        self.assertIsNone(my_stack.peek(5), msg="Should return None if no elements")
 
 
 if __name__ == '__main__':
