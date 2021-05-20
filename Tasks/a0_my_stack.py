@@ -4,6 +4,7 @@ My little Stack
 from typing import Any
 
 
+
 def push(elem: Any) -> None:
     """
     Operation that add element to stack

@@ -3,6 +3,7 @@ My little Queue
 """
 from typing import Any
 
+my_queue = []
 
 def enqueue(elem: Any) -> None:
     """
@@ -42,3 +43,8 @@ def clear() -> None:
     :return: None
     """
     return None
+
+
+if __name__ == '__main__':
+    ...
+
