@@ -38,7 +38,9 @@ def peek(ind: int = 0) -> Any:
     :param ind: index of element (count from the top, 0 - top, 1 - first from top, etc.)
     :return: peeked element or None if no element in this place
     """
-    print(ind)
+    # print(ind)
+    print(my_stack[-1 -ind])
+
     return None
 
 
@@ -48,7 +50,8 @@ def clear() -> None:
 
     :return: None
     """
-    return None
+    my_stack.clear()
+
 if __name__ == '__main__':
     push(1)
     push(2)
@@ -56,7 +59,6 @@ if __name__ == '__main__':
     push(4)
     print(my_stack)
 
-    peek(len(my_stack))
     peek(my_stack[0])
     print(my_stack)
 
@@ -68,3 +70,6 @@ if __name__ == '__main__':
     # print(my_stack)
     # pop()
     # print(my_stack)
+
+    clear(my_stack)
+    print('My result: ',my_stack)
