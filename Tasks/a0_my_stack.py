@@ -38,7 +38,8 @@ def peek(ind: int = 0) -> Any:
     :return: peeked element or None if no element in this place
     """
     # print(ind)
-    print(my_stack[-1 -ind])
+    if 0 <= ind < len(my_stack):
+        return(my_stack[-1 -ind])
 
 
 def clear() -> None:
