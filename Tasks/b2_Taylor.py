@@ -36,6 +36,17 @@ def sinx(x: Union[int, float]) -> float:
 
         return ((-1) ** (n + 1)) * (x ** (2*n-1)) / factorial(2*n - 1)
 
+    result = 0
+    n = 1 #ToDo count (itertools)
+    while True:
+        current_item = _get_item(n)
+        if abs(current_item) < DELTA:
+            break
+        result += current_item
+        n += 1
+
+
+
     print(x)
     return 0
 
