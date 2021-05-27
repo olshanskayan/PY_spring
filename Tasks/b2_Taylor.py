@@ -4,6 +4,8 @@ Taylor series
 from typing import Union
 from math import factorial
 
+DELTA = 0.0001
+
 
 def ex(x: Union[int, float]) -> float:
     """
@@ -32,7 +34,7 @@ def sinx(x: Union[int, float]) -> float:
         if not isinstance(n, int):
             raise TypeError
 
-        return (x ** (2*n-1)) / factorial(2*n - 1)
+        return ((-1) ** (n + 1)) * (x ** (2*n-1)) / factorial(2*n - 1)
 
     print(x)
     return 0
