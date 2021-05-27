@@ -2,6 +2,7 @@
 Taylor series
 """
 from typing import Union
+from math import factorial
 
 
 def ex(x: Union[int, float]) -> float:
@@ -11,9 +12,6 @@ def ex(x: Union[int, float]) -> float:
     :param x: x value
     :return: e^x value
     """
-    print(x)
-    return 0
-
 
 def sinx(x: Union[int, float]) -> float:
     """
@@ -22,5 +20,23 @@ def sinx(x: Union[int, float]) -> float:
     :param x: x value
     :return: sin(x) value
     """
+    def _get_item(n: int) -> float:
+        """
+        Функция для получение следующего числа из бесконечного ряда Тейлора для sin(x)
+        :param n: порядковый номер элемента из ряда
+        :return:  элемент из бесконечного ряда Тейлора для sin(x)
+        """
+        if not n >= 1:
+            raise ValueError
+
+        if not isinstance(n, int):
+            raise TypeError
+
+        return (x ** (2*n-1)) / factorial(2*n - 1)
+
+    print(x)
+    return 0
+
+
     print(x)
     return 0
